@@ -26,5 +26,11 @@ mkdir /home/ec2-user/spark-install
 chmod 777 /home/ec2-user/spark-install
 cd /home/ec2-user/spark-install
 wget https://mirrors.estointernet.in/apache/spark/spark-3.0.0-preview2/spark-3.0.0-preview2-bin-hadoop2.7.tgz
+yum -y install tar
 tar -xvf spark-3.0.0-preview2-bin-hadoop2.7.tgz
+mkdir /home/ec2-user/DataStage1
+cd /home/ec2-user/DataStage1
+aws s3 cp s3://62b-datasource-ff/emp1.txt .
+aws s3 cp s3://cloudawsjar/AWSSpark-0.0.1-SNAPSHOT.jar .
+
 --//
